@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/akletter
+# catalog-date 2009-01-23 15:11:09 +0100
+# catalog-license lppl
+# catalog-version 1.5i
 Name:		texlive-akletter
 Version:	1.5i
 Release:	1
@@ -52,6 +58,7 @@ earlier class called myletter.
 %doc %{_texmfdistdir}/doc/latex/akletter/letterdoc.tex
 %doc %{_texmfdistdir}/doc/latex/akletter/lettereng.pdf
 %doc %{_texmfdistdir}/doc/latex/akletter/lettereng.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +69,5 @@ earlier class called myletter.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

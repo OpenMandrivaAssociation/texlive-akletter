@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 An advanced letter document class which extends LaTeX's usual
@@ -31,21 +29,14 @@ handling of dates has inspired an extended version of date-
 handling in the isodate package. The class supersedes an
 earlier class called myletter.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
+
 
 #-----------------------------------------------------------------------
 %files
@@ -59,7 +50,6 @@ earlier class called myletter.
 %doc %{_texmfdistdir}/doc/latex/akletter/letterdoc.tex
 %doc %{_texmfdistdir}/doc/latex/akletter/lettereng.pdf
 %doc %{_texmfdistdir}/doc/latex/akletter/lettereng.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -70,5 +60,3 @@ earlier class called myletter.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

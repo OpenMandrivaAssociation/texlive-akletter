@@ -37,7 +37,6 @@ earlier class called myletter.
 	%{_sbindir}/texlive.post
     fi
 
-
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/akletter/akfax.cfg

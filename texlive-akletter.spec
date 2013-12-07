@@ -6,7 +6,7 @@
 # catalog-version 1.5i
 Name:		texlive-akletter
 Version:	1.5i
-Release:	5
+Release:	6
 Summary:	Comprehensive letter support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/akletter

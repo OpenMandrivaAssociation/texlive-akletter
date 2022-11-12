@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/akletter
-# catalog-date 2009-01-23 15:11:09 +0100
-# catalog-license lppl
-# catalog-version 1.5i
 Name:		texlive-akletter
-Version:	1.5i
-Release:	12
+Version:	15878
+Release:	1
 Summary:	Comprehensive letter support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/akletter
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/akletter.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/akletter.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/akletter.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/akletter.doc.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ handling in the isodate package. The class supersedes an
 earlier class called myletter.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,7 +46,7 @@ earlier class called myletter.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 

@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Comprehensive letter support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/akletter
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/akletter
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/akletter.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/akletter.doc.r%{version}.tar.xz
